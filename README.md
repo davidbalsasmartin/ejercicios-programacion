@@ -1,3 +1,22 @@
-# ejercicios-programacion
-Ejercicios de programación en 1º DAW
-(Desarrollo de aplicaciones Web) en el IEScampanillas
+# Ejercicios de Programacion
+
+Ejercicios de **programación** en 1º DAW
+(Desarrollo de aplicaciones Web) en el IES Campanillas.
+
+## Ejemplo de un programa en Java
+
+A continuación se muestra el programa *"Hola Mundo"* en Java.
+
+```java
+public class HolaMundo { // Clase principal
+  public static void main(String[] args) {
+    System.out.println("David Balsas Martín");
+  }
+}
+```
+Para compilar el programa teclea lo siguiente:
+
+```console
+javac HolaMundo.java
+
+```
