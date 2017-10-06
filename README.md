@@ -8,6 +8,9 @@ Ejercicios de **programación** en 1º DAW
 A continuación se muestra el programa *"Hola Mundo"* en Java.
 
 ```java
+/**
+ * Autor = David Balsas Martín
+ */
 public class HolaMundo { // Clase principal
   public static void main(String[] args) {
     System.out.println("Hola Mundo!");
