@@ -20,3 +20,6 @@ Para compilar el programa teclea lo siguiente:
 javac HolaMundo.java
 
 ```
+
+# que se aprende en programación
+[Aprende en java con Ejercicios](https:/leanpub.com/aprendejava)
