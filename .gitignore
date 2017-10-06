@@ -2,3 +2,5 @@
 *.bak
 # clases compiladas
 *.class
+# ficheros comprimidos
+*.zip *.rar
