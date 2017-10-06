@@ -24,13 +24,13 @@ javac HolaMundo.java
 
 ```
 
-## Qué se aprende en programación
+## Qué se aprende en programación :computer:
 
-* Lenguaje de programación java
-* Comandos de Linux
-* Git y Github
+* Lenguaje de programación java :coffee:
+* Comandos de Linux :penguin:
+* Git y Github :octocat:
 
-## Bibliografía
+## Bibliografía :books:
 
 <img src="imagenes/aprendejava.jpg" width="240">
 
