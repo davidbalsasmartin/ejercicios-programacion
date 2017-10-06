@@ -22,4 +22,4 @@ javac HolaMundo.java
 ```
 
 # que se aprende en programación
-[Aprende en java con Ejercicios](https://leanpub.com/aprendejava)
+[Aprende en java con Ejercicios](https://www.leanpub.com/aprendejava)
