@@ -21,5 +21,14 @@ javac HolaMundo.java
 
 ```
 
-# que se aprende en programación
-[Aprende en java con Ejercicios](https://www.leanpub.com/aprendejava)
+## Qué se aprende en programación
+
+* Lenguaje de programación java
+* Comandos de Linux
+* Git y Github
+
+## Bibliografía
+
+<img src="imagenes/aprendejava.jpg" width="240">
+
+Ejercicios](https://www.leanpub.com/aprendejava)
