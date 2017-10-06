@@ -1,6 +1,10 @@
-# copias seguridad
+# copias seguridad #
+###################
 *.bak
-# clases compiladas
+# clases compiladas #
+####################
 *.class
-# ficheros comprimidos
-*.zip *.rar
+# ficheros comprimidos #
+######################
+*.zip 
+*.rar
