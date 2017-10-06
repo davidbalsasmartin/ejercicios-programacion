@@ -34,4 +34,4 @@ javac HolaMundo.java
 
 <img src="imagenes/aprendejava.jpg" width="240">
 
-Ejercicios](https://www.leanpub.com/aprendejava)
+[Ejercicios](https://www.leanpub.com/aprendejava)
