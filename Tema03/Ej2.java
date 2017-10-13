@@ -1,9 +1,9 @@
 /**
-*
-*2º ejercicio del tema 3
-*
-*Autor David Balsas
-*/
+ *
+ * 2º ejercicio del tema 3
+ *
+ * @author David Balsas
+ */
 
 public class Ej2 {
   public static void main(String[] args) {
@@ -11,8 +11,8 @@ public class Ej2 {
     System.out.print("Por favor, introduce una cantidad en euros: ");
     double eur = Double.parseDouble(System.console().readLine());
 
-    double total = (eur * 166.386);
+    int pts = (int)(eur * 166.386);
 
-    System.out.println(eur + " euros son " + total + " pesetas.");
+    System.out.println(eur + " euros son " + pts + " pesetas.");
   }
 }

@@ -1,7 +1,7 @@
 /**
  * Capitulo 3 ej.7
  *
- * Autor David Balsas Martín
+ * @Author David Balsas Martín
  */
 
 public class Ej7 {
@@ -13,6 +13,7 @@ public class Ej7 {
     double iva = 0.21 ;
     System.out.println( "base imponible =  " + base + " €");
     System.out.println( "IVA            =  " + iva + " %" );
+    System.out.println( "---------------------------");
     System.out.println( "Total factura  =  " + (base + (base * iva)) + " €");
   }
 }

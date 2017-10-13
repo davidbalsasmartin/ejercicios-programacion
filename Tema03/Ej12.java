@@ -1,9 +1,9 @@
 /**
-*
-*12º ejercicio del tema 3
-*
-*Autor David Balsas
-*/
+ *
+ * 12º ejercicio del tema 3
+ *
+ * @Author David Balsas
+ */
  
  public class Ej12 {
   public static void main(String[] args) {

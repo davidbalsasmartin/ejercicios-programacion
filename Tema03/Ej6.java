@@ -1,9 +1,9 @@
 /**
-*
-*6º ejercicio del tema 3
-*
-*Autor David Balsas
-*/
+ *
+ * 6º ejercicio del tema 3
+ *
+ * @Author David Balsas
+ */
  
  public class Ej6 {
   public static void main(String[] args) {
