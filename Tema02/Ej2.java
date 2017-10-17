@@ -1,10 +1,10 @@
 /**
  * Capítulo 2, Ejercicio 2
  *
- * @autor David.B.M.
+ * @Author David.B.M.
  */
 
-public class Ejercicio22 {
+public class Ej2 {
   public static void main(String[] args) {
     String nombre = "David Balsas Martín";
    

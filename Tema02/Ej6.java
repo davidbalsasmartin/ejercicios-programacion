@@ -1,10 +1,10 @@
 /**
- * Capitulo 2 ej.6
+ * Capítulo 2, Ejercicio 6
  *
- * @autor David.B.M.
+ * @Author David.B.M.
  */
 
-public class Ejercicio26 {
+public class Ej6 {
   public static void main(String[] args) {
     double base = 800 ;
     double iva = 0.21 ;

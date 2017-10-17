@@ -1,10 +1,10 @@
 /**
- * Operaciones y asignaciones
+ * Capítulo 2, Ejercicio 1
  *
- * autor David.B.M
+ * @Author David.B.M.
  */
 
-public class Ejercicio21 {
+public class Ej1 {
   public static void main(String[] args) {
 
     int x = 144;

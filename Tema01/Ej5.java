@@ -1,3 +1,9 @@
+/**
+ * Capítulo 1, Ejercicio 5
+ *
+ * @Author David.B.M.
+ */
+
 public class Ej5 {
   public static void main(String[] args) {
     String bln = "\033[37m";

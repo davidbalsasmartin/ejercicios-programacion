@@ -1,9 +1,9 @@
 /**
+ * Capítulo 3, Ejercicio 1
  *
- *1º ejercicio del tema 3
- *
- * @Author David Balsas
+ * @Author David.B.M.
  */
+
 public class Ej1 {
   public static void main(String[] args) {
 

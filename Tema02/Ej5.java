@@ -1,10 +1,10 @@
 /**
- * Capitulo 2 ej.6
+ * Capítulo 2, Ejercicio 5
  *
- * @autor David.B.M.
+ * @Author David.B.M.
  */
 
-public class Ejercicio25 {
+public class Ej5 {
   public static void main(String[] args) {
     int pes = 273;
     double eur = pes * 0.06;

@@ -1,7 +1,7 @@
 /**
- * Capitulo 3 ej.8
+ * Capítulo 3, Ejercicio 8
  *
- * @Author David Balsas Martín
+ * @Author David.B.M.
  */
 
 public class Ej8 {

@@ -1,8 +1,7 @@
 /**
+ * Capítulo 3, Ejercicio 2
  *
- * 2º ejercicio del tema 3
- *
- * @author David Balsas
+ * @Author David.B.M.
  */
 
 public class Ej2 {

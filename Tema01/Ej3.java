@@ -1,3 +1,9 @@
+/**
+ * Capítulo 1, Ejercicio 3
+ *
+ * @Author David.B.M.
+ */
+
 public class Ej3 {
   public static void main(String[] args) {
     System.out.printf("%-10s      %-10s\n",  "school", "colegio");

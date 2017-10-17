@@ -1,10 +1,9 @@
 /**
+ * Capítulo 3, Ejercicio 9
  *
- *9º ejercicio del tema 3
- *
- *@Author David Balsas
+ * @Author David.B.M.
  */
- 
+
  public class Ej9 {
   public static void main(String[] args) {
     System.out.print("Por favor, introduce el radio del cono en cm: ");

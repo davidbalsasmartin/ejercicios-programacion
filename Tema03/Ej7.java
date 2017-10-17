@@ -1,7 +1,7 @@
 /**
- * Capitulo 3 ej.7
+ * Capítulo 3, Ejercicio 7
  *
- * @Author David Balsas Martín
+ * @Author David.B.M.
  */
 
 public class Ej7 {

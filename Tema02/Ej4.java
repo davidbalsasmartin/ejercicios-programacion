@@ -1,10 +1,10 @@
 /**
- * Capitulo 2 ej.4
+ * Capítulo 2, Ejercicio 4
  *
- * @autor David.B.M.
+ * @Author David.B.M.
  */
 
-public class Ejercicio24 {
+public class Ej4 {
   public static void main(String[] args) {
 
     double eur = 1000;

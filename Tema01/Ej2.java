@@ -1,3 +1,8 @@
+/**
+ * Capítulo 1, Ejercicio 2
+ *
+ * @Author David.B.M.
+ */
 
 public class Ej2 { // Clase principal
   public static void main(String[] args) {

@@ -1,3 +1,9 @@
+/**
+ * Capítulo 1, Ejercicio 4
+ *
+ * @Author David.B.M.
+ */
+
 public class Ej4 {
   public static void main(String[] args) {
     System.out.println("  L         M         X         J         V  ");

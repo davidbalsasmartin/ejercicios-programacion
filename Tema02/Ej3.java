@@ -1,10 +1,10 @@
 /**
- * 
+ * Capítulo 2, Ejercicio 3
  *
- * @autor David.B.M.
+ * @Author David.B.M.
  */
 
-public class Ejercicio23 {
+public class Ej3 {
   public static void main(String[] args) {
     String miNom = "David Balsas Martín";
     String miDir = "C/ Alcalde Martín Gil";

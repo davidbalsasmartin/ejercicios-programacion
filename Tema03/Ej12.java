@@ -1,10 +1,9 @@
 /**
+ * Capítulo 3, Ejercicio 12
  *
- * 12º ejercicio del tema 3
- *
- * @Author David Balsas
+ * @Author David.B.M.
  */
- 
+
  public class Ej12 {
   public static void main(String[] args) {
     System.out.print("Por favor, introduce la primera nota: ");
