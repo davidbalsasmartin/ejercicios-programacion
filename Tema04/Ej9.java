@@ -19,8 +19,21 @@ public class Ej9 {
     double resultadoMas = ((-valorB + raizCuad) / (2 * valorA));
     double resultadoMenos = ((-valorB - raizCuad) / (2 * valorA));
     
-    if (((valorA == 0) && (valorB == 0) && (valorC == 0)) || ((valorA == 0) && (valorB == 0))) {
+    if (((valorA == 0) && (valorB == 0) && (valorC == 0)) || ((valorA == 0) && (valorB == 0) &&(valorC != 0))) {
     System.out.println("La ecuación tiene infinitas soluciones o no tiene ninguna");
+    } else
+    if ((valorA != 0) && (valorB == 0) && (valorC == 0)) {
+    System.out.println("x = 0");
+    } else
+    if ((valorA == 0) && (valorB != 0) && (valorC == 0)) {
+    System.out.println("x = 0");
+    } else
+    if ((valorA != 0) && (valorB != 0) && (valorC == 0)) {
+    System.out.println("x = 0");
+    System.out.println("x = " + (-valorB / valorA));
+    } else
+    if ((valorA == 0) && (valorB != 0) && (valorC != 0)) {
+    System.out.println("x1 y x2 = " + (-valorC / valorB));
     } else
     if (operaDentroRaiz < 0) {
     System.out.println("No es posible averiguar el resultado");
