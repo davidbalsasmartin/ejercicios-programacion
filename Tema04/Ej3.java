@@ -1,7 +1,7 @@
 /**
  * Capítulo 4, Ejercicio 3
  *
- * @Author David.B.M.
+ * @author David.B.M.
  */
 
 public class Ej3 {

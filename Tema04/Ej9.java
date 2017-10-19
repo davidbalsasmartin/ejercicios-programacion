@@ -1,7 +1,7 @@
 /**
  * Capítulo 4, Ejercicio 9
  *
- * @Author David.B.M.
+ * @author David.B.M.
  */
 
 public class Ej9 {
@@ -21,24 +21,20 @@ public class Ej9 {
     
     if (((valorA == 0) && (valorB == 0) && (valorC == 0)) || ((valorA == 0) && (valorB == 0) &&(valorC != 0))) {
     System.out.println("La ecuación tiene infinitas soluciones o no tiene ninguna");
-    } else
-    if ((valorA != 0) && (valorB == 0) && (valorC == 0)) {
+    } else if ((valorA != 0) && (valorB == 0) && (valorC == 0)) {
     System.out.println("x = 0");
-    } else
-    if ((valorA == 0) && (valorB != 0) && (valorC == 0)) {
+    } else if ((valorA != 0) && (valorB == 0) && (valorC != 0)) {
     System.out.println("x = 0");
-    } else
-    if ((valorA != 0) && (valorB != 0) && (valorC == 0)) {
+    } else if ((valorA == 0) && (valorB != 0) && (valorC == 0)) {
+    System.out.println("x = 0");
+    } else if ((valorA != 0) && (valorB != 0) && (valorC == 0)) {
     System.out.println("x = 0");
     System.out.println("x = " + (-valorB / valorA));
-    } else
-    if ((valorA == 0) && (valorB != 0) && (valorC != 0)) {
+    } else if ((valorA == 0) && (valorB != 0) && (valorC != 0)) {
     System.out.println("x1 y x2 = " + (-valorC / valorB));
-    } else
-    if (operaDentroRaiz < 0) {
+    } else if (operaDentroRaiz < 0) {
     System.out.println("No es posible averiguar el resultado");
-    } else
-    if (resultadoMas == resultadoMenos) {
+    } else if (resultadoMas == resultadoMenos) {
     System.out.printf("x = ± %.2f %n", resultadoMas);
     } else {
     System.out.printf("x = %.2f %n", resultadoMas);

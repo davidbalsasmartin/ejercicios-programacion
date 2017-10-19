@@ -1,7 +1,7 @@
 /**
  * Capítulo 4, Ejercicio 6
  *
- * @Author David.B.M.
+ * @author David.B.M.
  */
 
 public class Ej6 {
@@ -12,8 +12,8 @@ public class Ej6 {
     
     double dividido = ((2 * variableH) / 9.81);
     
-    if (dividido < 0) {
-      System.out.println("No se puede resolver, puesto que no existe la raiz de 0");
+    if (dividido <= 0) {
+      System.out.println("La altura debe ser mayor que 0");
     } else {
       System.out.printf("tardará = %.2f segundos", Math.sqrt(dividido));
     }

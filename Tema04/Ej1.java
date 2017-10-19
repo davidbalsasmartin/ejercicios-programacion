@@ -1,7 +1,7 @@
 /**
  * Capítulo 4, Ejercicio 1
  *
- * @Author David.B.M.
+ * @author David.B.M.
  */
 
 public class Ej1 {
@@ -18,6 +18,7 @@ public class Ej1 {
       case "martes":
         primHora = "Programación";
         break;
+      case "miércoles":
       case "miercoles":
         primHora = "Sistemas";
         break;
@@ -27,6 +28,7 @@ public class Ej1 {
       case "viernes":
         primHora = "Programación";
         break;
+      case "sábado":
       case "sabado":
         primHora = "No hay clase";
         break;
