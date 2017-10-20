@@ -29,7 +29,11 @@ public class Ej12 {
     System.out.println("¿La profesora de lenguajes se llama Pilar?");
     String preg10 = System.console().readLine().toLowerCase();
     
-    int puntos = 0;
+    int puntos = 0; 
+    
+    /** x++ primero operas con x y en resultado se incrementa
+    ++x primero incremento y luego opero
+    (en este caso es igual **/
     
     if (preg1.equals("si")) {
       puntos++ ;
