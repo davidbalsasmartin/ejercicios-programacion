@@ -14,8 +14,10 @@ public class Ej15 {
     System.out.println("Por favor mete un exponente y pulsa enter");
     int exp = Integer.parseInt(System.console().readLine());
     int contador;
-    for (contador = 1; contador < exp; contador++ ) {
-    System.out.println(base + "()" + contador);
+    int base2 = 1;
+    for (contador = 1; contador <= exp; contador++ ) {
+      base2 =  base2 * base;
+      System.out.println(base + "()" + contador + " = " + base2);
     }
   }
 }
