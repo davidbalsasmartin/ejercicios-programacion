@@ -12,7 +12,7 @@ public class Ej25 {
     int suma= 0;
     while (num > 0) {
     int separarNum = num % 10;
-    suma = (separarNum * 10) + (suma);
+    suma = (suma * 10) + (separarNum);
     num = num / 10;
     }
     System.out.println(suma);
