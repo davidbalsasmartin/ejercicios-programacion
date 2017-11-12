@@ -20,6 +20,9 @@ public class Ej37 {
 		while (suma > 0) {
       int separarNum2 = suma % 10;
       suma = suma / 10;
+      if (separarNum2 == 0) {
+        System.out.print(" ");
+      }
       for (int contador = 1; contador <= separarNum2; contador++) {
         System.out.print("|");
       }
