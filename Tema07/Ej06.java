@@ -3,7 +3,7 @@ package tema07;
 import java.util.Scanner;
 
 /**
- * Capítulo 7, Ejercicio 5
+ * Capítulo 7, Ejercicio 6
  *
  * @author David.B.M.
  */
