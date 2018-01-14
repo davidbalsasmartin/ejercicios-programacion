@@ -28,5 +28,19 @@ public class Ej01 {
     //siguientePrimo
     System.out.println("El número primo siguiente a 30 es: " + mates.matematicas.siguientePrimo(30));
     System.out.println("El número primo siguiente a 36 es: " + mates.matematicas.siguientePrimo(37));
+    //esCapicua
+    if (mates.matematicas.esCapicua(7456)) {
+      System.out.println("El número 7456 es capicúa");
+    } else {
+      System.out.println("El número 7456 no es capicúa");
+    }
+    if (mates.matematicas.esCapicua(766667)) {
+      System.out.println("El número 766667 es capicúa");
+    } else {
+      System.out.println("El número 766667 no es capicúa");
+    }
+    //potencia
+    System.out.println("El número 2 elevado a 3 es: " + mates.matematicas.potencia(2, 3));
+    System.out.println("El número 4 elevado a 5 es: " + mates.matematicas.potencia(4, 5));
   }
 }

@@ -61,4 +61,38 @@ public class matematicas {
     while (!esPrimo(++x)) {};
     return x;
   }
+  /**
+   * Muestra si el número es capicúa.
+   * <p>
+   * @param x número que se quiere comprobar
+   * @return verdadero si x es capicúa.
+   */
+  public static boolean esCapicua(long x) { 
+    return x == voltea(x);
+  }
+  /**
+   * Muestra si el número es capicúa.
+   * <p>
+   * @param x número que se quiere comprobar
+   * @return verdadero si x es capicúa.
+   */
+  public static boolean esCapicua(int x) {  
+    return esCapicua((long) x);
+  }
+  /**
+   * Muestra un número elevado a cierta potencia.
+   * <p>
+   * @param x número base
+   * @param exponente número al que se debe elevar
+   * @return el nº elevado a la potencia.
+   */
+  public static int potencia(int x, int exponente) {
+    int elevado = x;
+    if (exponente > 1) { 
+      for (int contador = 2; contador <= exponente; contador++) {
+        elevado = elevado * x;
+      }
+    }
+    return elevado;
+  }
 }
