@@ -42,5 +42,15 @@ public class Ej01 {
     //potencia
     System.out.println("El número 2 elevado a 3 es: " + mates.matematicas.potencia(2, 3));
     System.out.println("El número 4 elevado a 5 es: " + mates.matematicas.potencia(4, 5));
+    //digitos
+    System.out.println("El número 2345 tiene: " + mates.matematicas.digitos(2345) + " cifras");
+    System.out.println("El número -23 tiene: " + mates.matematicas.digitos(-23) + " cifras");
+    // posicionDeDigito
+    System.out.println("En el 385232, el dígito 3 está en la posición " + mates.matematicas.posicionDeDigito(385232, 3));
+    System.out.println("En el 78321, el dígito 5 está en la posición " + mates.matematicas.posicionDeDigito(78321, 5));
+    System.out.println("En el 7821, el dígito 1 está en la posición " + mates.matematicas.posicionDeDigito(7821, 1));
+    // quitaPorDetras
+    System.out.println("Si al 123456789 se le quitan por detrás 4 dígitos, se queda como " + mates.matematicas.quitaPorDetras(123456789, 4));
+    System.out.println("Si al 12344321 se le quita por detrás 1 dígito, se queda como " + mates.matematicas.quitaPorDetras(12344321, 1));
   }
 }
