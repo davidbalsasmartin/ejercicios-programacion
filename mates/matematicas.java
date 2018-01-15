@@ -124,6 +124,7 @@ public class matematicas {
       return contador;
     }
   }
+
   /**
    * Muestra el número de dígitos de un nº.
    * <p>
@@ -133,6 +134,7 @@ public class matematicas {
   public static int digitos(int x) {
     return (int) digitos((long) x);
   }
+
   /**
    * Devuelve el dígito que está en una posición determinada de un número.
    *
@@ -146,8 +148,9 @@ public class matematicas {
     while (n-- > 0) {
       x = x / 10;
     }
-    return (int)x % 10;
+    return (int) x % 10;
   }
+
   /**
    * Devuelve el dígito que está en una posición determinada de un número.
    *
@@ -156,72 +159,86 @@ public class matematicas {
    * @return dígito que está en la posición del número
    */
   public static int digitoN(int x, int n) {
-    return digitoN((long)x, n);
+    return digitoN((long) x, n);
   }
+
   /**
    * Da la posición del dígito de un número que coincida con la busqueda.
    *
    * @param x número
    * @param digit dígito a buscar
-   * @return  posición de la primera coincidencia del dígito dentro del número
+   * @return posición de la primera coincidencia del dígito dentro del número
    */
   public static int posicionDeDigito(long x, int digit) {
     int contador;
-    for (contador = 0; (contador < digitos(x)) && (digitoN(x, contador) != digit); contador++) {};
+    for (contador = 0; (contador < digitos(x)) && (digitoN(x, contador) != digit); contador++) {
+    };
     if (contador == digitos(x)) {
       return -1;
     } else {
       return contador;
     }
   }
+
   /**
    * Da la posición del dígito de un número que coincida con la busqueda.
    *
    * @param x número
    * @param digit dígito a buscar
-   * @return  posición de la primera coincidencia del dígito dentro del número
+   * @return posición de la primera coincidencia del dígito dentro del número
    */
   public static int posicionDeDigito(int x, int digit) {
-    return posicionDeDigito((long)x, digit);
+    return posicionDeDigito((long) x, digit);
   }
   /**
-   * Le quita a un número <code>n</code> dígitos por detrás (por la derecha). 
-   *
-   * @param x número entero
-   * @param n número de dígitos que se le van a quitar
-   * @return  número inicial <code>x</code> con <code>n</code> dígitos menos
-   *          quitados de la derecha
-   */
-  public static long quitaPorDetras(long x, int n) {
-    return x / (long)potencia(10, n);
-  }
-    /**
-   * Le quita a un número dígitos por la derecha. 
+   * Le quita a un número dígitos por la derecha.
    *
    * @param x número
    * @param num número de dígitos que se le van a quitar
-   * @return  número con dígitos restados
+   * @return número con dígitos restados
+   */
+  public static long quitaPorDetras(long x, int num) {
+    return x / (long) potencia(10, num);
+  }
+
+  /**
+   * Le quita a un número dígitos por la derecha.
+   *
+   * @param x número
+   * @param num número de dígitos que se le van a quitar
+   * @return número con dígitos restados
    */
   public static int quitaPorDetras(int x, int num) {
-    return (int)quitaPorDetras((long) x, num);
+    return (int) quitaPorDetras((long) x, num);
   }
   /**
    * Pone un número delantre de otro, formando uno solo.
    *
    * @param x número
    * @param num dígito que se va a pegar a la izquierda
-   * @return  número final
+   * @return número final
    */
-  public static int pegaPorDelante(long x, int num) {
+  public static long pegaPorDelante(long x, int num) {
     long xAux = x;
-    int longitud;
-      for (longitud = 0; xAux > 0; xAux/=10) {
-        longitud++;
-      }
-      do {
-        num*= 10;
-        longitud--;
-      }while (longitud < 0);
-    return 0;
+    int longitud = 0;
+    for (longitud = 0; xAux > 0; xAux /= 10) {
+      longitud++;
+    }
+    do {
+      num *= 10;
+      longitud--;
+    } while (longitud > 0);
+    x = x + num;
+    return x;
+  }
+  /**
+   * Pone un número delantre de otro, formando uno solo.
+   *
+   * @param x número
+   * @param num dígito que se va a pegar a la izquierda
+   * @return número final
+   */
+  public static int pegaPorDelante(int x, int num) {
+    return (int) pegaPorDelante((long) x, num);
   }
 }

@@ -53,8 +53,8 @@ public class Ej01 {
     System.out.println("Si al 123456789 se le quitan por detrás 4 dígitos, se queda como " + mates.matematicas.quitaPorDetras(123456789, 4));
     System.out.println("Si al 12344321 se le quita por detrás 1 dígito, se queda como " + mates.matematicas.quitaPorDetras(12344321, 1));
     // pegaPorDelante
-    
-    
+    System.out.println("Si al 123 se le pega el nº 67, se queda como " + mates.matematicas.pegaPorDelante(123, 67));
+    System.out.println("Si al 456789 se le pega el nº 89, se queda como " + mates.matematicas.pegaPorDelante(456789, 89));
     // digitoN
     System.out.println("En la posición 4 del 123456789 está el " + mates.matematicas.digitoN(123456789, 4));
     System.out.println("En la posición 1 del 12344321 está el " + mates.matematicas.digitoN(12344321, 1));
