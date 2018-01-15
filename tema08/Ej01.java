@@ -10,7 +10,7 @@ import mates.matematicas;
 public class Ej01 {
 
   public static void main(String[] args) {
-    //volteado
+    //voltea
     System.out.println("El número 15 volteado es: " + mates.matematicas.voltea(15));
     System.out.println("El número 2752941 volteado es: " + mates.matematicas.voltea(2752941));
     System.out.println("El número -23 volteado es: " + mates.matematicas.voltea(-23));
@@ -52,5 +52,11 @@ public class Ej01 {
     // quitaPorDetras
     System.out.println("Si al 123456789 se le quitan por detrás 4 dígitos, se queda como " + mates.matematicas.quitaPorDetras(123456789, 4));
     System.out.println("Si al 12344321 se le quita por detrás 1 dígito, se queda como " + mates.matematicas.quitaPorDetras(12344321, 1));
+    // pegaPorDelante
+    
+    
+    // digitoN
+    System.out.println("En la posición 4 del 123456789 está el " + mates.matematicas.digitoN(123456789, 4));
+    System.out.println("En la posición 1 del 12344321 está el " + mates.matematicas.digitoN(12344321, 1));
   }
 }

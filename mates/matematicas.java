@@ -195,7 +195,7 @@ public class matematicas {
   public static long quitaPorDetras(long x, int n) {
     return x / (long)potencia(10, n);
   }
-  /**
+    /**
    * Le quita a un número dígitos por la derecha. 
    *
    * @param x número
@@ -204,5 +204,24 @@ public class matematicas {
    */
   public static int quitaPorDetras(int x, int num) {
     return (int)quitaPorDetras((long) x, num);
+  }
+  /**
+   * Pone un número delantre de otro, formando uno solo.
+   *
+   * @param x número
+   * @param num dígito que se va a pegar a la izquierda
+   * @return  número final
+   */
+  public static int pegaPorDelante(long x, int num) {
+    long xAux = x;
+    int longitud;
+      for (longitud = 0; xAux > 0; xAux/=10) {
+        longitud++;
+      }
+      do {
+        num*= 10;
+        longitud--;
+      }while (longitud < 0);
+    return 0;
   }
 }
