@@ -1,13 +1,13 @@
 package tema08;
 
 /**
- * Capítulo 7, Ejercicio 3
+ * Capítulo 8, Ejercicios 1 - 14
  *
  * @author David.B.M.
  */
 import mates.matematicas;
 
-public class Ej01 {
+public class Ej01a14 {
 
   public static void main(String[] args) {
     //voltea
@@ -58,5 +58,44 @@ public class Ej01 {
     // digitoN
     System.out.println("En la posición 4 del 123456789 está el " + mates.matematicas.digitoN(123456789, 4));
     System.out.println("En la posición 1 del 12344321 está el " + mates.matematicas.digitoN(12344321, 1));
+    
+    //MIRAR
+
+
+    // posicionDeDigito ////////////////////////////////////////////
+
+    System.out.println("En el 3452, el dígito 4 está en la posición " + mates.matematicas.posicionDeDigito(3452, 4));
+    System.out.println("En el 78604321, el dígito 1 está en la posición " + mates.matematicas.posicionDeDigito(78604321, 1));
+
+    // quitaPorDetras //////////////////////////////////////////////
+
+    System.out.println("Si al 78604321 se le quitan por detrás 4 dígitos, se queda como " + mates.matematicas.quitaPorDetras(78604321, 4));
+    System.out.println("Si al 1000 se le quita por detrás 1 dígito, se queda como " + mates.matematicas.quitaPorDetras(1000, 1));
+
+    // quitaPorDelante /////////////////////////////////////////////
+
+    System.out.println("Si al 78604321 se le quitan por delante 4 dígitos, se queda como " + mates.matematicas.quitaPorDelante(78604321, 4));
+    System.out.println("Si al 78604000 se le quitan por delante 2 dígitos, se queda como " + mates.matematicas.quitaPorDelante(78604000, 2));
+
+    // pegaPorDetras ///////////////////////////////////////////////
+
+    System.out.println("Si al 567 se le pega por detrás el 1 da el " + mates.matematicas.pegaPorDetras(567, 1));
+    System.out.println("Si al 33 se le pega por detrás el 0 da el " + mates.matematicas.pegaPorDetras(33, 0));
+
+    // pegaPorDelante //////////////////////////////////////////////
+
+    System.out.println("Si al 567 se le pega por delate el 1 da el " + mates.matematicas.pegaPorDelante(567, 1));
+    System.out.println("Si al 33 se le pega por delante el 0 da el " + mates.matematicas.pegaPorDelante(33, 0));
+
+    // trozoDeNumero ///////////////////////////////////////////////
+
+    System.out.println("Al 78604000 le cojo el trozo que va de la posición 0 a la 3: " + mates.matematicas.trozoDeNumero(78604000, 0, 3));
+    System.out.println("Al 78604000 le cojo el trozo que va de la posición 4 a la 6: " + mates.matematicas.trozoDeNumero(78604000, 4, 6));
+
+    // juntaNumeros ////////////////////////////////////////////////
+
+    System.out.println("Juntando el 21 y el 40 da el " + mates.matematicas.juntaNumeros(21, 40));
+    System.out.println("Juntando el 789 y el 250 da el " + mates.matematicas.juntaNumeros(789, 250));
+
   }
 }
