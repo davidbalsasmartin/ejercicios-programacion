@@ -29,13 +29,14 @@ public class Ej07 {
         noRepet = true;
       }
     } while (noRepet == false);
+    int w = 8;
     do {
       System.out.print("Por favor, introduce el eje x (1-8): ");
       int x = s.nextInt();
       System.out.print("Por favor, introduce el eje y (1-8): ");
       int y = s.nextInt();
       for (int contador = 0; contador < 8; contador++) {
-        System.out.print(contador + " | ");
+        System.out.print(w + " | ");
         for (int contador2 = 0; contador2 < 8; contador2++) {
           if (((x == xMina) && (y == yMina) && (contador == x) && (contador2 == y))) {
             error = true;
@@ -46,13 +47,12 @@ public class Ej07 {
           } else if ((x == contador) && (y == contador2)) { 
             marcar[x][y] = 1;
             System.out.print("  x ");
-          } else if (marcar[contador][contador2] > 0) {
-            System.out.print("  x ");
           } else {
             System.out.print("    ");
           }
         }
         System.out.println("");
+        w--;
       }
       System.out.println("   ----------------------------------");
       System.out.println("      1   2   3   4   5   6   7   8");
