@@ -7,7 +7,7 @@
 
 public class Ej38 {
   public static void main (String[] args) {
-	System.out.println("Por favor introduce una altura para la X");
+	System.out.println("Por favor introduce una altura para el reloj:");
     System.out.print("Debe ser un número entero, impar y mayor que 4: ");
     int num = Integer.parseInt(System.console().readLine());
     int espaciosAntesArriba = 0;

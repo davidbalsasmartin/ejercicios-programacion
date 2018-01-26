@@ -335,4 +335,59 @@ public class matematicas {
   public static int pegaPorDelante(int x, int num) {
     return (int) pegaPorDelante((long) x, num);
   }
+  /**
+   * Genera array n x m con nºs aleatorios entre los intervalos dados.
+   *
+   * @param longi longitud del array
+   * @param min mínimo
+   * @param max máximo
+   * @return array bidimensional
+   */
+  public static int[] generaArrayInt(int longi, int min, int max) {
+    int nArray[] = new int[longi];
+      for (int contador20 = 0; contador20 <= longi ; contador20++) {
+        nArray[contador20] = (int)(Math.random()*max + 1) + min;
+      }
+    return nArray;
+  }
+  /**
+   * Muestra por pantalla un array ya generado.
+   * 
+   * @param n
+   */
+  public static void muestraArray(int[] n) {
+    for (int contador20 = 0; contador20 < n.length; contador20++) {
+      System.out.println(n[contador20]);
+    }
+  }
+  /**
+   * Muestra el mínimo de un array ya generado.
+   * 
+   * @param n
+   * @return min
+   */
+  public static int minimoArrayInt(int[] n) {
+    int min = 5000;
+    for (int contador20 = 0; contador20 < n.length; contador20++) {
+      if (min > n[contador20]) {
+        min = n[contador20];
+      }
+    }
+    return min;
+  }
+  /**
+   * Muestra el máximo de un array ya generado.
+   * 
+   * @param n
+   * @return min
+   */
+  public static int maximoArrayInt(int[] n) {
+    int max = 5000;
+    for (int contador20 = 0; contador20 < n.length; contador20++) {
+      if (max < n[contador20]) {
+        max = n[contador20];
+      }
+    }
+    return max;
+  }
 }
