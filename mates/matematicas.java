@@ -379,7 +379,7 @@ public class matematicas {
    * Muestra el máximo de un array ya generado.
    * 
    * @param n
-   * @return min
+   * @return max
    */
   public static int maximoArrayInt(int[] n) {
     int max = 5000;
@@ -389,5 +389,18 @@ public class matematicas {
       }
     }
     return max;
+  }
+  /**
+   * Muestra la media de un array ya generado.
+   * 
+   * @param n
+   * @return media
+   */
+  public static int mediaArrayInt(int[] n) {
+    int media = 0;
+    for (int contador20 = 0; contador20 < n.length; contador20++) {
+      media = n[contador20] + media;
+    }
+    return media;
   }
 }
