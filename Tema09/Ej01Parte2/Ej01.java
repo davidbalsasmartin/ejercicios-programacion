@@ -1,4 +1,4 @@
-package tema09;
+package Ej01Parte2;
 
 /**
  * Capítulo 9, Ejercicio 1

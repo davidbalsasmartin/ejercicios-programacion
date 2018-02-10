@@ -1,12 +1,13 @@
+package Ej03Parte2;
 public class Lagarto extends Animal {
 
   public Lagarto(String sexo, String edad) {
     super(sexo,edad);
   }
   public void pelea() {
-    if (edad == "viejo") {
+    if (this.getEdad() == "viejo") {
       System.out.println("no estoy para esos trotes, yo quiero tomar el sol");
-    } else if (sexo == "macho") {
+    } else if (this.getSexo() == "macho") {
       System.out.println("en otro momento pelearé");
     } else {
       System.out.println("");

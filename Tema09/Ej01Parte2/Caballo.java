@@ -1,4 +1,4 @@
-package tema09;
+package Ej01Parte2;
 /**
  * Capítulo 9, Ejercicio 1
  *
@@ -12,7 +12,6 @@ public class Caballo {
   double peso;
   int altura;
   int velocidad;
-  
   
   Caballo (String c, String r, double p, int a, int v) {
     this.color = c;

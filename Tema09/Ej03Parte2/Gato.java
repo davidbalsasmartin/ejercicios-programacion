@@ -1,4 +1,4 @@
-
+package Ej03Parte2;
 public class Gato extends Mamifero {
 
   public Gato(String sexo, String edad) {
@@ -6,12 +6,12 @@ public class Gato extends Mamifero {
   }
 
   public void maulla() {
-    if (edad == "viejo") {
+    if (this.getEdad() == "viejo") {
       System.out.println("estoy ronco");
-    } else if (sexo == "macho") {
-      System.out.println("miiiaaaaauuuu");
+    } else if (this.getSexo() == "macho") {
+      System.out.println("miiiaaaaauuuu de macho");
     } else {
-      System.out.println("miiaauuu de macho");
+      System.out.println("miiaauuu");
     }
   }
 

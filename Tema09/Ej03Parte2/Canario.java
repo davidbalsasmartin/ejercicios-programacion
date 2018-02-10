@@ -1,12 +1,13 @@
+package Ej03Parte2;
 public class Canario extends Ave {
 
   public Canario(String sexo, String edad) {
     super(sexo,edad);
   }
   public void canta() {
-    if (edad == "viejo") {
+    if (this.getEdad() == "viejo") {
       System.out.println("estoy ronco");
-    } else if (sexo == "macho") {
+    } else if (this.getSexo() == "macho") {
       System.out.println("kiiikiiiriiikiiiii");
     } else {
       System.out.println("pio pio pio pio pio");
