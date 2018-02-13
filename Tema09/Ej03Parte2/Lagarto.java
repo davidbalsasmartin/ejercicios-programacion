@@ -10,7 +10,7 @@ public class Lagarto extends Animal {
     } else if (this.getSexo() == "macho") {
       System.out.println("en otro momento pelearé");
     } else {
-      System.out.println("");
+      System.out.println("PUM PON PUM");
     }
   }
 

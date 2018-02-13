@@ -1,8 +1,8 @@
 package Ej03Parte2;
 public class Animal {
 
-  String edad;
-  String sexo;
+  private String edad;
+  private String sexo;
 
   public Animal(String edad, String sexo) {
     this.edad = edad;
