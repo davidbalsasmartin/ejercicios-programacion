@@ -11,10 +11,13 @@ public class Coche extends Vehiculo {
   public String getTapacubos() {
     return tapacubos;
   }
-  
+
   public void acelera() {
     System.out.println("BRRRRUPA BRRRRRUPA");
   }
-  
-  
+
+  public void derrapa() {
+    System.out.println("bbrrrrrfggfbrbrbrbbrbrssssssssh");
+  }
+
 }

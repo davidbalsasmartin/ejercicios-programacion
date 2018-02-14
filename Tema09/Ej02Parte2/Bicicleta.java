@@ -15,5 +15,7 @@ public class Bicicleta extends Vehiculo {
   public void acelera() {
     System.out.println("spgpphpsgpsgp");
   }
-  
+  public void derrapa() {
+    System.out.println("brsssssssh");
+  }
 }
