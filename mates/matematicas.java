@@ -1,13 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package mates;
 
 /**
  *
- * @author David
+ * @author David.B.M.
  */
 public class matematicas {
 
@@ -31,12 +26,6 @@ public class matematicas {
     return volteado;
   }
 
-  /**
-   * Le da la vuelta a un número y lo convierte en int.
-   *
-   * @param x número que se quiere voltear
-   * @return número volteado.
-   */
   public static int voltea(int x) {
     return (int) voltea((long) x);
   }
@@ -49,7 +38,7 @@ public class matematicas {
    */
   public static boolean esPrimo(int x) {
     if (x == 1) {
-     return false;
+      return false;
     }
     for (int contador = 2; contador < x; contador++) {
       if (((x % contador) == 0)) {
@@ -81,12 +70,6 @@ public class matematicas {
     return x == voltea(x);
   }
 
-  /**
-   * Muestra si el número es capicúa.
-   * <p>
-   * @param x número que se quiere comprobar
-   * @return verdadero si x es capicúa.
-   */
   public static boolean esCapicua(int x) {
     return esCapicua((long) x);
   }
@@ -99,11 +82,16 @@ public class matematicas {
    * @return el nº elevado a la potencia.
    */
   public static int potencia(int x, int exponente) {
+    x = pasarAPositivo(x);
     int elevado = x;
     if (exponente > 1) {
       for (int contador = 2; contador <= exponente; contador++) {
         elevado = elevado * x;
       }
+    } else if (exponente == 0) {
+      elevado = 1;
+    } else if (exponente == 1) {
+      elevado = x;
     }
     return elevado;
   }
@@ -115,26 +103,21 @@ public class matematicas {
    * @return el nº de dígitos.
    */
   public static int digitos(long x) {
-    int digitos = 1;
-    while (x < 9) {
-      x /= 10;
-      digitos++;
+    int contador = 0;
+    while (x != 0) {
+      x = x / 10;
+      contador++;
     }
-    return digitos;
+    return contador;
   }
 
-  /**
-   * Muestra el número de dígitos de un nº.
-   * <p>
-   * @param x número que se desea dividir
-   * @return el nº de dígitos.
-   */
   public static int digitos(int x) {
     return (int) digitos((long) x);
   }
 
   /**
    * Devuelve el dígito que está en una posición determinada de un número.
+   * (primera posicion = 0)
    *
    * @param x número
    * @param n posición del número a comprobar
@@ -146,18 +129,32 @@ public class matematicas {
     while (n-- > 0) {
       x = x / 10;
     }
-    return (int) x % 10;
+    return (int) (x % 10);
+  }
+
+  public static int digitoN(int x, int n) {
+    return digitoN((long) x, n);
   }
 
   /**
    * Devuelve el dígito que está en una posición determinada de un número.
+   * (primera posicion = 1)
    *
    * @param x número
    * @param n posición del número a comprobar
    * @return dígito que está en la posición del número
    */
-  public static int digitoN(int x, int n) {
-    return digitoN((long) x, n);
+  public static int digitoN2(long x, int n) {
+    x = voltea(x);
+
+    while (n-- > 0) {
+      x = x / 10;
+    }
+    return (int) (x % 10) - 1;
+  }
+
+  public static int digitoN2(int x, int n) {
+    return digitoN2((long) x, n);
   }
 
   /**
@@ -177,36 +174,35 @@ public class matematicas {
       return contador;
     }
   }
-    /**
-   * Le quita a un número <code>n</code> dígitos por detrás (por la derecha). 
+
+  public static int posicionDeDigito(int x, int d) {
+    return posicionDeDigito((long) x, d);
+  }
+
+  /**
+   * Le quita a un número <code>n</code> dígitos por detrás (por la derecha).
    *
    * @param x número entero
    * @param n número de dígitos que se le van a quitar
-   * @return  número inicial <code>x</code> con <code>n</code> dígitos menos
-   *          quitados de la derecha
+   * @return número inicial <code>x</code> con <code>n</code> dígitos menos
+   * quitados de la derecha
    */
   public static long quitaPorDetras(long x, int n) {
-    return x / (long)potencia(10, n);
+    return x / (long) potencia(10, n);
+  }
+
+  public static int quitaPorDetras(int x, int n) {
+    return (int) quitaPorDetras((long) x, n);
   }
 
   /**
-   * Le quita a un número <code>n</code> dígitos por detrás (por la derecha). 
+   * Le quita a un número <code>n</code> dígitos por delante (por la izquierda).
+   *
    *
    * @param x número entero
    * @param n número de dígitos que se le van a quitar
-   * @return  número inicial <code>x</code> con <code>n</code> dígitos menos
-   *          quitados de la derecha
-   */
-  public static int quitaPorDetras(int x, int n) {
-
-    return (int)quitaPorDetras((long) x, n);
-  }
-  /**
-   * Le quita a un número <code>n</code> dígitos por delante (por la izquierda).                                                 *
-   * @param x número entero
-   * @param n número de dígitos que se le van a quitar
-   * @return  número inicial <code>x</code> con <code>n</code> dígitos menos
-   *          quitados de la izquierda
+   * @return número inicial <code>x</code> con <code>n</code> dígitos menos
+   * quitados de la izquierda
    */
   public static long quitaPorDelante(long x, int n) {
     x = pegaPorDetras(x, 1); // "cierra" el número por si acaso termina en 0
@@ -215,15 +211,8 @@ public class matematicas {
     return x;
   }
 
-  /**
-   * Le quita a un número <code>n</code> dígitos por delante (por la izquierda).                                                 *
-   * @param x número entero
-   * @param n número de dígitos que se le van a quitar
-   * @return  número inicial <code>x</code> con <code>n</code> dígitos menos
-   *          quitados de la izquierda
-   */
   public static int quitaPorDelante(int x, int n) {
-    return (int)quitaPorDelante((long)x, n);
+    return (int) quitaPorDelante((long) x, n);
   }
 
   /**
@@ -231,35 +220,28 @@ public class matematicas {
    *
    * @param x número entero
    * @param d dígito que se le va a pegar por la derecha
-   * @return  número inicial <code>x</code> con el dígito <code>d</code> pegado
-   *          por la derecha
+   * @return número inicial <code>x</code> con el dígito <code>d</code> pegado
+   * por la derecha
    */
   public static long pegaPorDetras(long x, int d) {
     return juntaNumeros(x, d);
   }
 
-  /**
-   * Añade un dígito a un número por detrás (por la derecha).
-   *
-   * @param x número entero
-   * @param d dígito que se le va a pegar por la derecha
-   * @return  número inicial <code>x</code> con el dígito <code>d</code> pegado
-   *          por la derecha
-   */
   public static int pegaPorDetras(int x, int d) {
-    return (int)pegaPorDetras((long)x, d);
+    return (int) pegaPorDetras((long) x, d);
   }
+
   /**
    * Toma como parámetros las posiciones inicial y final dentro de un número y
    * devuelve el trozo correspondiente.
    * <p>
    * Las posiciones se cuentan de izquierda a derecha comenzando por el cero.
    *
-   * @param x      número entero
+   * @param x número entero
    * @param inicio posición inicial
-   * @param fin    posición final
-   * @return       trozo de número compuesto por todos los dígitos que van desde
-   *               la posición inicial a la posición final incluyendo ambos
+   * @param fin posición final
+   * @return trozo de número compuesto por todos los dígitos que van desde la
+   * posición inicial a la posición final incluyendo ambos
    */
   public static long trozoDeNumero(long x, int inicio, int fin) {
     int longitud = digitos(x);
@@ -268,20 +250,8 @@ public class matematicas {
     return x;
   }
 
-  /**
-   * Toma como parámetros las posiciones inicial y final dentro de un número y
-   * devuelve el trozo correspondiente.
-   * <p>
-   * Las posiciones se cuentan de izquierda a derecha comenzando por el cero.
-   *
-   * @param x      número entero
-   * @param inicio posición inicial
-   * @param fin    posición final
-   * @return       trozo de número compuesto por todos los dígitos que van desde
-   *               la posición inicial a la posición final incluyendo ambos
-   */
   public static int trozoDeNumero(int x, int inicio, int fin) {
-    return (int)trozoDeNumero((long)x, inicio, fin);
+    return (int) trozoDeNumero((long) x, inicio, fin);
   }
 
   /**
@@ -289,23 +259,17 @@ public class matematicas {
    *
    * @param x trozo que se pegará por la izquierda
    * @param y trozo que se pegará por la derecha
-   * @return  número compuesto de los trozos <code>x</code> e <code>y</code>
+   * @return número compuesto de los trozos <code>x</code> e <code>y</code>
    */
   public static long juntaNumeros(long x, long y) {
-    return (long)(x * potencia(10, digitos(y))) + y;
+    return (long) (x * potencia(10, digitos(y))) + y;
+  }
+
+  public static int juntaNumeros(int x, int y) {
+    return (int) (juntaNumeros((long) x, (long) y));
   }
 
   /**
-   * Pega dos números para formar uno solo.
-   *
-   * @param x trozo que se pegará por la izquierda
-   * @param y trozo que se pegará por la derecha
-   * @return  número compuesto de los trozos <code>x</code> e <code>y</code>
-   */
-  public static int juntaNumeros(int x, int y) {
-    return (int)(juntaNumeros((long)x, (long)y));
-  }
-    /**
    * Pone un número delantre de otro, formando uno solo.
    *
    * @param x número
@@ -325,82 +289,165 @@ public class matematicas {
     x = x + num;
     return x;
   }
-  /**
-   * Pone un número delantre de otro, formando uno solo.
-   *
-   * @param x número
-   * @param num dígito que se va a pegar a la izquierda
-   * @return número final
-   */
+
   public static int pegaPorDelante(int x, int num) {
     return (int) pegaPorDelante((long) x, num);
   }
+
+
   /**
-   * Genera array n x m con nºs aleatorios entre los intervalos dados.
+   * Pasa un número de binario a decimal.
    *
-   * @param longi longitud del array
-   * @param min mínimo
-   * @param max máximo
-   * @return array bidimensional
+   * @param x = numero a convertir
+   * @return resultado
    */
-  public static int[] generaArrayInt(int longi, int min, int max) {
-    int nArray[] = new int[longi];
-      for (int contador20 = 0; contador20 <= longi ; contador20++) {
-        nArray[contador20] = (int)(Math.random()*max + 1) + min;
-      }
-    return nArray;
-  }
-  /**
-   * Muestra por pantalla un array ya generado.
-   * 
-   * @param n
-   */
-  public static void muestraArray(int[] n) {
-    for (int contador20 = 0; contador20 < n.length; contador20++) {
-      System.out.println(n[contador20]);
+  public static long binarioADecimal(long x) {
+    int resultado = 0;
+    for (int contador = 0; contador < digitos(x); contador++) {
+      resultado += digitoN(x, digitos(x) - contador - 1) * (potencia(2, contador));
     }
+    return resultado;
   }
-  /**
-   * Muestra el mínimo de un array ya generado.
-   * 
-   * @param n
-   * @return min
-   */
-  public static int minimoArrayInt(int[] n) {
-    int min = 5000;
-    for (int contador20 = 0; contador20 < n.length; contador20++) {
-      if (min > n[contador20]) {
-        min = n[contador20];
-      }
-    }
-    return min;
+
+  public static int binarioADecimal(int x) {
+    return (int) binarioADecimal((long) x);
   }
+
   /**
-   * Muestra el máximo de un array ya generado.
-   * 
-   * @param n
-   * @return max
+   * Pasa un número a positivo.
+   *
+   * @param x = numero a convertir
+   * @return x ya convertido
    */
-  public static int maximoArrayInt(int[] n) {
-    int max = 5000;
-    for (int contador20 = 0; contador20 < n.length; contador20++) {
-      if (max < n[contador20]) {
-        max = n[contador20];
-      }
+  public static long pasarAPositivo(long x) {
+    if (x >= 0) {
+    } else if (x < 0) {
+      x = x * (- 1);
     }
-    return max;
+    return x;
   }
+
+  public static int pasarAPositivo(int x) {
+    return (int) pasarAPositivo((long) x);
+  }
+
   /**
-   * Muestra la media de un array ya generado.
-   * 
-   * @param n
-   * @return media
+   * Pasa un número decimal (en base 10) a binario (base 2).
+   *
+   * @param decimal número entero en base 10
+   * @return número inicial pasado a binario
    */
-  public static int mediaArrayInt(int[] n) {
-    int media = 0;
-    for (int contador20 = 0; contador20 < n.length; contador20++) {
-      media = n[contador20] + media;
+  public static long decimalABinario(int decimal) {
+
+    if (decimal == 0) {
+      return 0;
     }
-    return media;
+
+    long binario = 1;
+
+    while (decimal > 1) {
+      binario = pegaPorDetras(binario, decimal % 2);
+      decimal = decimal / 2;
+    }
+    binario = pegaPorDetras(binario, 1);
+    binario = voltea(binario);
+    binario = quitaPorDetras(binario, 1);
+
+    return binario;
+  }
+
+  /**
+   * Pasa un número binario (en base 2) a octal (base 8).
+   *
+   * @param binario número entero en binario
+   * @return número inicial pasado a octal
+   */
+  public static long binarioAOctal(long binario) {
+    long octal = 1;
+
+    while (binario > 0) {
+      octal = octal * 10 + (binarioADecimal(binario % 1000));
+      binario = binario / 1000;
+
+    octal = mates.matematicas.pegaPorDetras(octal, 1);
+    octal = mates.matematicas.voltea(octal);
+    octal = mates.matematicas.quitaPorDetras(octal, 1);
+    octal = mates.matematicas.quitaPorDelante(octal, 1);
+    }
+    return octal;
+  }
+
+  /**
+   * Pasa un número binario (en base 2) a hexadecimal (base 16).
+   *
+   * @param binario número entero en binario
+   * @return número inicial pasado a hexadecimal
+   */
+  public static String binarioAHexadecimal(long binario) {
+    String hexadecimal = "";
+    String digitosHexa = "0123456789ABCDEF";
+
+    while (binario > 0) {
+      hexadecimal = digitosHexa.charAt((int) binarioADecimal(binario % 10000)) + hexadecimal;
+      binario = binario / 10000;
+    }
+    return hexadecimal;
+  }
+
+  /**
+   * Pasa un número octal (en base 8) a binario (base 2).
+   *
+   * @param octal número entero en octal
+   * @return número inicial pasado a binario
+   */
+  public static long octalABinario(long octal) {
+    long binario = 0;
+
+    for (int i = 0; i < mates.matematicas.digitos(octal); i++) {
+      binario = binario * 1000 + decimalABinario(mates.matematicas.digitoN(octal, i));
+    }
+
+    return binario;
+  }
+
+  /**
+   * Pasa un número decimal (en base 10) a binario (base 2).
+   *
+   * @param decimal
+   * @return número inicial pasado a binario
+   */
+  public static long decimalABinario(long decimal) {
+    if (decimal == 0) {
+      return 0;
+    }
+
+    long binario = 1;
+
+    while (decimal > 1) {
+      binario = mates.matematicas.pegaPorDetras(binario, (int) decimal % 2);
+      decimal = decimal / 2;
+    }
+    binario = mates.matematicas.pegaPorDetras(binario, 1);
+    binario = mates.matematicas.voltea(binario);
+    binario = mates.matematicas.quitaPorDetras(binario, 1);
+
+    return binario;
+  }
+
+  /**
+   * Pasa un número hexadecimal (en base 10) a binario (base 2).
+   *
+   * @param hexadecimal número entero en hexadecimal
+   * @return número inicial pasado a binario
+   */
+  public static long hexadecimalABinario(String hexadecimal) {
+    String digitosHexa = "0123456789ABCDEF";
+    long binario = 0;
+
+    for (int i = 0; i < hexadecimal.length(); i++) {
+      binario = binario * 10000 + decimalABinario(digitosHexa.indexOf(hexadecimal.charAt(i)));
+    }
+
+    return binario;
   }
 }
